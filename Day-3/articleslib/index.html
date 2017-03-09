@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>The Articles Library</title>
+	<link rel="stylesheet" type="text/css" href="styles/app.css">
+</head>
+<body ng-app="articlesLib">
+
+	<div ng-controller="articlesController">
+		<h2>My Articles</h1>
+		<ul>
+			<li ng-repeat="article in articles">
+				<h2>
+					<span ng-bind="article.id"></span> | <span ng-bind="article.title"></span>
+				</h2>
+				<p ng-bind="article.description"></p>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+
+
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="js/articles/articles.js"></script>
+<script type="text/javascript" src="js/articles/controllers/articlesController.js"></script>
+
+</body>
+</html>
