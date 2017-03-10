@@ -3,7 +3,9 @@
 	<title>The Articles Library</title>
 	<link rel="stylesheet" type="text/css" href="styles/app.css">
 </head>
-<body ng-app="articlesLib">
+<body ng-app="articlesLib" ng-controller="appController">
+	<h1>{{appTitle}}</h1>
+	<hr>
 
 	<div ng-controller="articlesController">
 		<!-- Articles with 10% discount -->
@@ -33,6 +35,9 @@
 
 
 <script type="text/javascript" src="index.js"></script>
+
+<script type="text/javascript" src="js/base/controllers/appController.js"></script>
+
 <script type="text/javascript" src="js/articles/articles.js"></script>
 <script type="text/javascript" src="js/articles/controllers/articlesController.js"></script>
 <script type="text/javascript" src="js/articles/services/articlesService.js"></script>
