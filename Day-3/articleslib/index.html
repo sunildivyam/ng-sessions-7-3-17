@@ -9,7 +9,7 @@
 
 	<div ng-controller="articlesController">
 		<h2>My Articles</h1>
-		<ul ng-show="articles && articles.length > 0">
+		<ul>
 			<li ng-repeat="article in articles">
 				<h2>
 					<span ng-bind="article.id"></span> | <span ng-bind="article.title"></span>
@@ -17,7 +17,6 @@
 				<p ng-bind="article.description"></p>
 			</li>
 		</ul>
-		<p ng-bind="notFoundMsg" ng-show="!articles || (articles && articles.length <= 0)"></p>
 	</div>
 
 
@@ -41,7 +40,6 @@
 
 <script type="text/javascript" src="js/articles/articles.js"></script>
 <script type="text/javascript" src="js/articles/controllers/articlesController.js"></script>
-<script type="text/javascript" src="js/articles/services/articlesService.js"></script>
 
 </body>
 </html>
