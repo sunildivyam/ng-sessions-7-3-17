@@ -10,17 +10,21 @@
 	<div ng-controller="articlesController">
 		<h2>My Articles</h1>
 		<ul ng-show="articles && articles.length > 0">
-			<li> <input type="text" ng-model="keywords"/>  </li>
-			<li ng-repeat="article in articles | filter:keywords">
+			<li ng-repeat="article in articles">
 				<h2>
-					<span ng-bind="article.id"></span> | <span ng-bind="article.title | uppercase"></span>
+					<span ng-bind="article.id"></span> | <span ng-bind="article.title"></span>
 				</h2>
 				<p ng-bind="article.description"></p>
-				<div>Price: <span ng-bind="article.price | discount:10 | currency:'Rs. '"></span></div>
 			</li>
 		</ul>
 		<p ng-bind="notFoundMsg" ng-show="!articles || (articles && articles.length <= 0)"></p>
 	</div>
+
+
+
+
+
+
 
 
 
@@ -38,7 +42,6 @@
 <script type="text/javascript" src="js/articles/articles.js"></script>
 <script type="text/javascript" src="js/articles/controllers/articlesController.js"></script>
 <script type="text/javascript" src="js/articles/services/articlesService.js"></script>
-<script type="text/javascript" src="js/articles/filters/discount.js"></script>
 
 </body>
 </html>
