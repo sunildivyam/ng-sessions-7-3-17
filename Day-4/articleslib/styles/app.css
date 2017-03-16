@@ -1,0 +1,53 @@
+h1, h2, h3, ul, li, p, input[type="text"] {
+	color: green;
+	border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+h2{
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	background-color: #f7f7f7;
+}
+
+p {
+	font-family: sans-serif;
+    line-height: 1.7;
+}
+
+.box-50 {
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+}
+
+ul.grid li{
+	width: 150px;
+	height: 200px;
+
+	display: inline-block;
+	border: 1px solid darkgrey;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+ul.grid li h2 {
+	font-size: 12px;
+	height: 16px;
+}
+
+ul.grid li p {
+	height: 100px;
+	overflow: hidden;
+	padding: 0px;
+    font-size: 12px;
+}
+
