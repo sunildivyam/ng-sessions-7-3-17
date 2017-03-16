@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>The Articles Library</title>
+	<link rel="stylesheet" type="text/css" href="styles/app.css">
+</head>
+<body ng-app="articlesLib" ng-controller="appController">
+	<h1>{{appTitle}}</h1>
+	<hr>
+
+	<item name="Laptop"> </item>
+	<item name="Desktop"> </item>
+	<item name="iPad"> </item>
+	<item name="Mac"> </item>
+
+
+	<div ng-controller="articlesController">
+		<div class="box-50">
+			<!-- Articles with 10% discount -->
+			<articles-list
+				data-header="Articles with 10% Discount"
+				data-items="articles"
+				data-status-message="{{notFoundMsg}}"
+				data-discount="10"
+				data-list-mode="list"
+				data-on-select="onSelectArticle(event, item)">
+			</articles-list>
+		</div>
+		<div class="box-50">
+			<!-- Articles with 50% discount -->
+			<articles-list
+				data-header="Articles with 50% Discount"
+				data-items="articles"
+				data-status-message="{{notFoundMsg}}"
+				data-discount="50"
+				data-list-mode="inline">
+			</articles-list>
+		</div>
+	</div>
+
+
+
+
+
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+
+
+<script type="text/javascript" src="index.js"></script>
+
+<script type="text/javascript" src="js/base/controllers/appController.js"></script>
+<script type="text/javascript" src="js/base/directives/item.js"></script>
+
+<script type="text/javascript" src="js/articles/articles.js"></script>
+<script type="text/javascript" src="js/articles/controllers/articlesController.js"></script>
+<script type="text/javascript" src="js/articles/services/articlesServiceProvider.js"></script>
+<script type="text/javascript" src="js/articles/filters/discount.js"></script>
+<script type="text/javascript" src="js/articles/directives/articlesList.js"></script>
+</body>
+</html>
