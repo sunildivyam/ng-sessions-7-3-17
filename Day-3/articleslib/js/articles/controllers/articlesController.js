@@ -19,5 +19,9 @@ angular.module('articles')
 		});
 	}
 
+	$scope.onSelectArticle = function(event, article) {
+		alert("You Selected:" + (article && article.title));
+	};
+
 	getArticles();
 }]);

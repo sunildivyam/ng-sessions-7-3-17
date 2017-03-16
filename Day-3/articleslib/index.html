@@ -8,21 +8,27 @@
 	<hr>
 
 	<div ng-controller="articlesController">
-		<!-- Articles with 10% discount -->
-		<articles-list
-			data-header="Articles with 10% Discount"
-			data-items="articles"
-			data-status-message="{{notFoundMsg}}"
-			data-discount="10">
-		</articles-list>
-
-		<!-- Articles with 50% discount -->
-		<articles-list
-			data-header="Articles with 50% Discount"
-			data-items="articles"
-			data-status-message="{{notFoundMsg}}"
-			data-discount="50">
-		</articles-list>
+		<div class="box-50">
+			<!-- Articles with 10% discount -->
+			<articles-list
+				data-header="Articles with 10% Discount"
+				data-items="articles"
+				data-status-message="{{notFoundMsg}}"
+				data-discount="10"
+				data-list-mode="list"
+				data-on-select="onSelectArticle(event, item)">
+			</articles-list>
+		</div>
+		<div class="box-50">
+			<!-- Articles with 50% discount -->
+			<articles-list
+				data-header="Articles with 50% Discount"
+				data-items="articles"
+				data-status-message="{{notFoundMsg}}"
+				data-discount="50"
+				data-list-mode="inline">
+			</articles-list>
+		</div>
 	</div>
 
 
