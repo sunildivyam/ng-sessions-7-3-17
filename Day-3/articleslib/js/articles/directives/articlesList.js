@@ -7,16 +7,13 @@ angular.module('articles')
 			header: '@',
 			items: '=',
 			statusMessage: '@',
-			discount: '=',
-			listMode: '@',
-			onSelect: '&'
+			discount: '='
 		},
 		templateUrl: 'pages/articles-list.html',
-		link: function($scope, element, attrs) {
-			$scope.onViewClicked = function(event, mode) {
-				event.preventDefault();
-				$scope.listMode = mode;
-			};
+		link: function($scope, element) {
+			// here you can add behavior to the DOM or interact with it.
+			// element gives you the root element of the directive itself
+			//$scope gives you the scope object of the directive.
 		}
 	};
 }]);
