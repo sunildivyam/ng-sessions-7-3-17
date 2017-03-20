@@ -1,0 +1,4 @@
+<div>
+	<input ng-model="message" placeholder="your message..."/>
+	<button ng-repeat="logType in types" ng-click="onLogBtnClick($event, logType)">{{logType}}</button>
+</div>

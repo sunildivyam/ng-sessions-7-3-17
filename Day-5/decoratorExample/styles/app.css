@@ -1,0 +1,19 @@
+.log {
+	color: black;
+}
+
+.info {
+	color: blue;
+}
+
+.error {
+	color: red;
+}
+
+.warn {
+	color: yellow;
+}
+
+.debug {
+	color: green;
+}
