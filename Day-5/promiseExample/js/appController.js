@@ -1,10 +1,11 @@
 angular.module('promiseExample')
-.controller('appController', ['$scope', 'appService', function($scope, appService){
+.controller('appController', ['$scope', 'appService', '$q', function($scope, appService, $q){
 
 	// Task A
 	$scope.taskAValues = [];
 	$scope.taskACompleted = false;
-	appService.doTaskA().then(function(response) {
+	var taskAPromise = appService.doTaskA();
+	taskAPromise.then(function(response) {
 		$scope.taskACompleted = true;
 	}, function(rejection) {
 		// nothing to do
@@ -17,7 +18,8 @@ angular.module('promiseExample')
 
 	$scope.taskBValues = [];
 	$scope.taskBCompleted = false;
-	appService.doTaskB().then(function(response) {
+	var taskBPromise = appService.doTaskB();
+	taskBPromise.then(function(response) {
 		$scope.taskBCompleted = true;
 	}, function(rejection) {
 		// nothing to do
@@ -30,11 +32,22 @@ angular.module('promiseExample')
 
 	$scope.taskCValues = [];
 	$scope.taskCCompleted = false;
-	appService.doTaskC().then(function(response) {
+	var taskCPromise = appService.doTaskC();
+	taskCPromise.then(function(response) {
 		$scope.taskCCompleted = true;
 	}, function(rejection) {
 		// nothing to do
 	}, function(statusValue) {
 		$scope.taskCValues.push(statusValue);
 	});
+
+
+	$q.all([taskAPromise, taskBPromise, taskCPromise]).then(function(response) {
+		$scope.isAllCompleted = true;
+	});
+
+	/// Angular 1.5.8
+	// $q.race([taskAPromise, taskBPromise, taskCPromise]).then(function(response) {
+	// 	$scope.isCompletedAtLeastOne = true;
+	// });
 }]);
