@@ -1,0 +1,7 @@
+
+<ul>
+	<h2>{{title}}</h2>
+	<li ng-repeat="value in values track by $index">Fetched value: {{value}}</li>
+	<li ng-show="!isCompleted">fetching Task values...</li>
+</ul>
+<h2 ng-show="isCompleted === true">Task COMPLETED!</h2>
