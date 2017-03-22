@@ -9,7 +9,7 @@ angular.module('promiseExample')
 		value = value + 1;
 		$timeout(function(){
 			return performTask(value, maxValue, deferredO);
-		}, 500);
+		}, 100);
 	}
 
 	function performTaskA() {
