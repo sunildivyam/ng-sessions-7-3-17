@@ -1,0 +1,6 @@
+{
+	"id": 1001,
+	"title": "Learning JavaScript OOP",
+	"description": "To start with, let's give you a simplistic, high-level view of what Object-oriented programming (OOP) is. We say simplistic, because OOP can quickly get very complicated, and giving it a full treatment now would probably confuse more than help. The basic idea of OOP is that we use objects to model real world things that we want to represent inside our programs, and/or provide a simple way to access functionality that would otherwise be hard or impossible to make use of.",
+	"price": 150
+}

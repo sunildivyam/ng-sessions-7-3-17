@@ -1,0 +1,16 @@
+<div>
+	<div class="box-50">
+		<!-- Articles with 10% discount -->
+		<articles-list
+			data-header="My Articles"
+			data-items="articles"
+			data-status-message="{{notFoundMsg}}"
+			data-discount="10"
+			data-list-mode="inline"
+			data-on-select="onSelectArticle(event, item)">
+		</articles-list>
+	</div>
+	<div class="box-50">
+		<article-preview data-article="currentArticle"></article-preview>
+	</div>
+</div>

@@ -1,0 +1,7 @@
+{
+	"id": 1002,
+	"title": "Class Instances",
+	"description": "When an object instance is created from a class, the class's constructor function is run to create it. This process of creating an object instance from a class is called instantiation — the object instance is instantiated from the class",
+	"price": 200
+}
+

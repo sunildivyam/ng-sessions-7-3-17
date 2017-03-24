@@ -1,0 +1,10 @@
+<div ng-show="article">
+	<h2>
+		<span ng-bind="article.title | uppercase"></span>
+	</h2>
+	<div>Price: <span ng-bind="article.price | discount:discount | currency:'Rs. '"></span></div>
+	<h3>
+		<span ng-bind="article.id"></span>
+	</h3>
+	<p ng-bind="article.description"></p>
+</div>
